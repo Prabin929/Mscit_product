@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block head %}
+
+{% endblock head %}
+{% block body %}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+      <div class="text">
+         Stress Detection And Feedback On Stress Management
+      </div>
+      <form action="{% url 'detect_stress' %}" method='post'>
+         {% csrf_token %}
+        <label for="ID_Number"> ID_Number</label>
+              <input type="number" id="firstname" name="firstname"/> <br/>
+        <label for="Mean Heart Rate">Mean Heart Rate </label>
+              <input type="number" id="lastname" name="lastname"/><br/>
+        <label for="Mean EDA">Mean EDA </label>
+          <input type="number" id="firstname" name="firstname"/><br/>
+        <label for="Mean Temperature">Mean Temperature </label>
+              <input type="text" id="lastname" name="lastname"/>
+
+         <input type="submit" class="btn btn-success" value="Add Data">
+      </form>
+</div>
+{% endblock body %}
